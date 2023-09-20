@@ -1,0 +1,13 @@
+{
+  "name": "@poc/e2e",
+  "scripts": {
+    "open": "npx cypress open",
+    "run": "npx cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^13.2.0"
+  },
+  "dependencies": {
+    "@poc/strings": "workspace:^"
+  }
+}

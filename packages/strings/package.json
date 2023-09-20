@@ -1,5 +1,5 @@
 {
-  "name": "@dashboard/strings",
-  "version": "1.0.1",
-  "main": "strings.js"
+  "name": "@poc/strings",
+  "main": "strings.js",
+  "version": "0.0.1"
 }

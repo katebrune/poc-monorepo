@@ -1,19 +1,12 @@
 {
-  "name": "@dashboard/root",
+  "name": "@poc/root",
+  "packageManager": "yarn@3.6.3",
   "private": true,
-  "version": "1.0.0",
   "workspaces": [
-    "apps/ui",
-    "packages/strings",
-    "tests/ui-e2e"
+    "packages/*"
   ],
   "scripts": {
-    "ui:start": "yarn workspace @dashboard/ui start",
-    "ui-e2e:open": "yarn workspace @dashboard/ui-e2e open",
-    "ui-e2e:docker-build": "docker build -t cypress-test-image:1.0.0 . -f docker/Dockerfile.ui-e2e"
-    
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "engines": {}
+    "e2e:cypress-open": "yarn workspace @poc/e2e open",
+    "e2e:build-build-docker-image": "docker build -t cypress-test-image:1.0.0 -f docker/Dockerfile.e2e"
+  }
 }
