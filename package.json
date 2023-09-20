@@ -1,0 +1,19 @@
+{
+  "name": "@dashboard/root",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/ui",
+    "packages/strings",
+    "tests/ui-e2e"
+  ],
+  "scripts": {
+    "ui:start": "yarn workspace @dashboard/ui start",
+    "ui-e2e:open": "yarn workspace @dashboard/ui-e2e open",
+    "ui-e2e:docker-build": "docker build -t cypress-test-image:1.0.0 . -f docker/Dockerfile.ui-e2e"
+    
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {}
+}
