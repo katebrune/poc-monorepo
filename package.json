@@ -8,5 +8,8 @@
   "scripts": {
     "e2e:cypress-open": "yarn workspace @poc/e2e open",
     "e2e:build-build-docker-image": "docker build -t cypress-test-image:1.0.0 -f docker/Dockerfile.e2e"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
   }
 }
