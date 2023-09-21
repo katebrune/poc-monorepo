@@ -6,10 +6,10 @@ RUN yarn workspaces focus --production @poc/e2e
 FROM cypress/included as final
 WORKDIR /app
 COPY --from=builder ./app/package.json .
-COPY --from=builder ./app/packages/e2e ./packages/e2e
-COPY --from=builder ./app/packages/strings ./packages/strings
+COPY --from=builder ./app/packages/e2e /packages/e2e
+COPY --from=builder ./app/packages/strings /packages/strings
 COPY --from=builder ./app/.yarn ./.yarn
 COPY --from=builder ./app/.yarnrc.yml .
 COPY --from=builder ./app/yarn.lock .
-COPY --from=builder ./app/node_modules ./node_modules
-RUN cypress run --project ./packages/e2e
+COPY --from=builder ./app/node_modules /node_modules
+RUN cypress run --project /packages/e2e
